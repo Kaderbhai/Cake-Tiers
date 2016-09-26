@@ -1,10 +1,60 @@
 /* ==== GENERAL ==== */
+body {
+  font: "Berhard Modern", serif;
+  background: url("../img/duck_egg_background_3.jpg") repeat fixed;
+  background-size: 450px 450px;
+  text-align: center; }
+
+.container-fluid {
+  padding: 0px; }
+
 /* ==== GLOBAL ==== */
 /* ==== NAV ==== */
-/* ==== GO-TO-BUTTON ==== */
-/* ==== GENERAL ==== */
-/* ==== GENERAL ==== */
+#navbar-con {
+  padding-right: 0px;
+  padding-left: 0px; }
+
+.navbar-default {
+  background-color: white !important;
+  border-color: white !important; }
+
+.navbar-nav {
+  width: 100%;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: bold; }
+
+.navbar-nav > li {
+  float: none;
+  display: inline-block; }
+
+.navbar {
+  margin-bottom: 0px; }
+
+/* ==== INTRODUCTION ==== */
+#intro .row {
+  background: white url("../img/gallery/h20_cake.jpg") 10% -10px no-repeat;
+  height: 400px; }
+
+/* ==== GALLERY ==== */
+#gallery .row {
+  background: white; }
+
+/* ==== SERVICES ==== */
+#services .row {
+  background: white; }
+
+/* ==== CONTACT ==== */
+#contact .row {
+  background: white; }
+
 /* ==== FOOTER ==== */
+footer .row {
+  background: white; }
+
 /* ==== MEDIA QUERIES ==== */
+@media (min-width: 768px) {
+  .navbar {
+    border-radius: 0px; } }
 
 /*# sourceMappingURL=custom.css.map */

@@ -1,32 +1,102 @@
 //Colours
+$brown: rgb(80,48,25);
+$blue: rgb(125,179,177);
+$cream: rgb(245,247,205);
 
 //fonts
+$font1: 'Berhard Modern', serif;
+$font2: 'Montaga', serif;
 
+//Backgrounds
+$background1:'../img/duck_egg_background_1.jpg';
+$background2:'../img/duck_egg_background_3.jpg';
+$cover_image:'../img/gallery/h20_cake.jpg';
 
 //Mixin
 
- 
-//padding
-
 
 /* ==== GENERAL ==== */
+body {
+	font:$font1;
+	background:url($background2) repeat fixed;
+	background-size:450px 450px;
+	text-align:center;
+}
 
+.container-fluid {
+	padding:0px;
+}
 /* ==== GLOBAL ==== */
 
 
 /* ==== NAV ==== */
+#navbar-con {
+	padding-right: 0px;
+    padding-left: 0px;
+}
 
+.navbar-default {
+	background-color:white!important; 
+	border-color: white!important;
+}
 
-/* ==== GO-TO-BUTTON ==== */ 
+.navbar-nav {
+  width: 100%;
+  text-align: center;
+  font-size:1.3em;
+  font-weight: bold;
+}
 
+.navbar-nav > li {
+  float: none;
+  display: inline-block;
+}
 
-/* ==== GENERAL ==== */
+.navbar {
+    margin-bottom: 0px;
+}
 
-/* ==== GENERAL ==== */
+/* ==== INTRODUCTION ==== */ 
+#intro {
+
+	.row {
+		background:white url($cover_image) 10% -10px  no-repeat;
+		height:400px;	
+	}
+}
+
+/* ==== GALLERY ==== */
+#gallery {
+	.row {
+		background:white;
+	}
+}
+
+/* ==== SERVICES ==== */
+#services {
+	.row {
+		background:white;
+	}
+}
+
+/* ==== CONTACT ==== */
+#contact {
+	.row {
+		background:white;
+	}
+}
 
 /* ==== FOOTER ==== */
+footer {
+	.row {
+		background:white;
+	}
+}
 
 
 /* ==== MEDIA QUERIES ==== */
-
-
+@media (min-width: 768px) {
+	.navbar {
+		border-radius: 0px;
+	}
+}
