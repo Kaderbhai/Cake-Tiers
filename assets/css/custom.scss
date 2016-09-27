@@ -1,33 +1,125 @@
 //Colours
 $brown: rgb(80,48,25);
 $blue: rgb(125,179,177);
-$cream: rgb(245,247,205);
+$cream: rgb(255, 255, 208);
+$pink:rgb(223, 113, 178);
+
+$cream1:rgb(255, 255, 204);
+$cream2:rgb(245,247,205);
+$cream3:rgb(254, 255, 235);
+
 
 //fonts
-$font1: 'Berhard Modern', serif;
-$font2: 'Montaga', serif;
+$font1: 'Dancing Script', cursive;
+$font2: 'Josefin Slab', serif;
+$font3: 'Courgette', cursive;
+$font4: 'Tangerine', cursive;
 
 //Backgrounds
 $background1:'../img/duck_egg_background_1.jpg';
 $background2:'../img/duck_egg_background_3.jpg';
-$cover_image:'../img/gallery/h20_cake.jpg';
+$cover_image:'../img/cover_image_2.jpg';
 
 //Mixin
-
+@mixin linearGradient($gradient...){
+	background: linear-gradient($gradient); /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient($gradient); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient($gradient); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient($gradient); /* For Firefox 3.6 to 15 */
+	}
+	
+@mixin bg_border($color,$border){
+	background: $color;
+	border-radius:$border;		
+}
 
 /* ==== GENERAL ==== */
 body {
-	font:$font1;
+	font-family:$font2;
+	font-size:20px;
 	background:url($background2) repeat fixed;
 	background-size:450px 450px;
 	text-align:center;
+	color:$brown;
+}
+
+hr {
+	border-color:$pink;
+	border-width:3px;
+}
+
+.title {
+	width:50%;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family:$font3;
+	font-weight:bold;	
 }
 
 .container-fluid {
 	padding:0px;
 }
-/* ==== GLOBAL ==== */
 
+.badge.social {
+	background-color:$pink;	
+	font-size:27px;
+	height:55px;
+	width:55px;
+	text-align: center;
+	line-height:60px;
+	margin: 0 5px 20px 0;
+	padding:0;
+	-webkit-border-radius:50px;
+	-moz-border-radius:50px;
+	border-radius: 50px;
+	color:white;
+}
+
+.badge.social.facebook:hover {
+	transition: background-color 0.7s ease;
+	background-color:#3b5998;	
+}
+
+#maps-height {
+	padding-top:0;
+	margin-top:30px;
+	height:500px;	
+	width:100%;
+}
+
+#map {
+	height: 100%;
+	width:100%;
+}
+
+/* ==== GLOBAL ==== */
+button {
+
+	background:$pink;
+	
+	a {
+		color:white;
+	}
+	
+	a:hover {
+		color:white;
+		text-decoration: none;
+	}
+}
+
+button:hover {
+	transition:1s;
+	background:darken($pink,20%);
+}
+
+.row {
+	padding:0 0 40px 0;
+}
+
+.margin {
+	margin:0;
+}
 
 /* ==== NAV ==== */
 #navbar-con {
@@ -36,60 +128,90 @@ body {
 }
 
 .navbar-default {
-	background-color:white!important; 
+	background-color:$cream!important; 
 	border-color: white!important;
 }
 
 .navbar-nav {
-  width: 100%;
-  text-align: center;
-  font-size:1.3em;
-  font-weight: bold;
+	width: 100%;
+	text-align: center;
+	font-size:1.3em;
+	font-weight: bold;
 }
 
 .navbar-nav > li {
-  float: none;
-  display: inline-block;
+	float: none;
+	display: inline-block;
 }
 
 .navbar {
     margin-bottom: 0px;
 }
 
+.navbar-default .navbar-nav>li>a {
+    color:$pink;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: darken($pink, 20%);
+}
+
 /* ==== INTRODUCTION ==== */ 
 #intro {
+	background:white url($cover_image) no-repeat;
+	background-size:cover;
+	height:600px;	
+	
+	.col-sm-4{
+		padding-top:75px;
+		height:600px;
+		@include bg_border(rgba(255, 255, 208,	0.7), 3px);
 
-	.row {
-		background:white url($cover_image) 10% -10px  no-repeat;
-		height:400px;	
 	}
 }
 
 /* ==== GALLERY ==== */
 #gallery {
+	margin:0px 0 40px 0;
 	.row {
-		background:white;
-	}
-}
-
-/* ==== SERVICES ==== */
-#services {
-	.row {
-		background:white;
+		@include bg_border($cream, 3px);
 	}
 }
 
 /* ==== CONTACT ==== */
 #contact {
+	margin:40px 0 40px 0;
 	.row {
-		background:white;
+		@include bg_border($cream, 3px);
+	}
+}
+
+/* ==== SERVICES ==== */
+#services {
+	margin:40px 0 40px 0;
+	.row {
+		@include bg_border($cream, 3px);
 	}
 }
 
 /* ==== FOOTER ==== */
 footer {
+		@include bg_border($cream, 0px);
 	.row {
-		background:white;
+
+	}
+	
+	.col-sm-4 {
+		border-right:1px solid $pink; 
+		height:230px;
+	}
+	
+	.col-sm-4:last-child {
+		border-right:none;
+	}
+	
+	.copyright{
+		background:$pink;
 	}
 }
 

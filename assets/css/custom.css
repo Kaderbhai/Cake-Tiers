@@ -1,21 +1,80 @@
 /* ==== GENERAL ==== */
 body {
-  font: "Berhard Modern", serif;
+  font-family: "Josefin Slab", serif;
+  font-size: 20px;
   background: url("../img/duck_egg_background_3.jpg") repeat fixed;
   background-size: 450px 450px;
-  text-align: center; }
+  text-align: center;
+  color: #503019; }
+
+hr {
+  border-color: #df71b2;
+  border-width: 3px; }
+
+.title {
+  width: 50%; }
+
+h1, h2, h3, h4, h5 {
+  font-family: "Courgette", cursive;
+  font-weight: bold; }
 
 .container-fluid {
   padding: 0px; }
 
+.badge.social {
+  background-color: #df71b2;
+  font-size: 27px;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  line-height: 60px;
+  margin: 0 5px 20px 0;
+  padding: 0;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  color: white; }
+
+.badge.social.facebook:hover {
+  transition: background-color 0.7s ease;
+  background-color: #3b5998; }
+
+#maps-height {
+  padding-top: 0;
+  margin-top: 30px;
+  height: 500px;
+  width: 100%; }
+
+#map {
+  height: 100%;
+  width: 100%; }
+
 /* ==== GLOBAL ==== */
+button {
+  background: #df71b2; }
+  button a {
+    color: white; }
+  button a:hover {
+    color: white;
+    text-decoration: none; }
+
+button:hover {
+  transition: 1s;
+  background: #bf2b82; }
+
+.row {
+  padding: 0 0 40px 0; }
+
+.margin {
+  margin: 0; }
+
 /* ==== NAV ==== */
 #navbar-con {
   padding-right: 0px;
   padding-left: 0px; }
 
 .navbar-default {
-  background-color: white !important;
+  background-color: #ffffd0 !important;
   border-color: white !important; }
 
 .navbar-nav {
@@ -31,26 +90,55 @@ body {
 .navbar {
   margin-bottom: 0px; }
 
+.navbar-default .navbar-nav > li > a {
+  color: #df71b2; }
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: #bf2b82; }
+
 /* ==== INTRODUCTION ==== */
-#intro .row {
-  background: white url("../img/gallery/h20_cake.jpg") 10% -10px no-repeat;
-  height: 400px; }
+#intro {
+  background: white url("../img/cover_image_2.jpg") no-repeat;
+  background-size: cover;
+  height: 600px; }
+  #intro .col-sm-4 {
+    padding-top: 75px;
+    height: 600px;
+    background: rgba(255, 255, 208, 0.7);
+    border-radius: 3px; }
 
 /* ==== GALLERY ==== */
-#gallery .row {
-  background: white; }
-
-/* ==== SERVICES ==== */
-#services .row {
-  background: white; }
+#gallery {
+  margin: 0px 0 40px 0; }
+  #gallery .row {
+    background: #ffffd0;
+    border-radius: 3px; }
 
 /* ==== CONTACT ==== */
-#contact .row {
-  background: white; }
+#contact {
+  margin: 40px 0 40px 0; }
+  #contact .row {
+    background: #ffffd0;
+    border-radius: 3px; }
+
+/* ==== SERVICES ==== */
+#services {
+  margin: 40px 0 40px 0; }
+  #services .row {
+    background: #ffffd0;
+    border-radius: 3px; }
 
 /* ==== FOOTER ==== */
-footer .row {
-  background: white; }
+footer {
+  background: #ffffd0;
+  border-radius: 0px; }
+  footer .col-sm-4 {
+    border-right: 1px solid #df71b2;
+    height: 230px; }
+  footer .col-sm-4:last-child {
+    border-right: none; }
+  footer .copyright {
+    background: #df71b2; }
 
 /* ==== MEDIA QUERIES ==== */
 @media (min-width: 768px) {
