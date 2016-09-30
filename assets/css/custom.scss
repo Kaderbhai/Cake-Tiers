@@ -84,13 +84,31 @@ h1, h2, h3, h4, h5 {
 #maps-height {
 	padding-top:0;
 	margin-top:30px;
-	height:500px;	
+	height:400px;	
 	width:100%;
 }
 
 #map {
 	height: 100%;
 	width:100%;
+}
+
+.border {
+	width:70%;
+	height:40px;
+	margin:20px 0 20px 0;
+}
+
+.border-inverse {
+	width:70%;
+	height:40px; 
+	transform: rotate(180deg);
+	margin:20px 0 20px 0;
+}
+
+.img-responsive {
+	border:3px solid $pink;
+
 }
 
 /* ==== GLOBAL ==== */
@@ -111,10 +129,6 @@ button {
 button:hover {
 	transition:1s;
 	background:darken($pink,20%);
-}
-
-.row {
-	padding:0 0 40px 0;
 }
 
 .margin {
@@ -166,7 +180,8 @@ button:hover {
 		padding-top:75px;
 		height:600px;
 		@include bg_border(rgba(255, 255, 208,	0.7), 3px);
-
+		border-left:1px solid $pink;
+		border-right:1px solid $pink;		
 	}
 }
 
@@ -174,7 +189,8 @@ button:hover {
 #gallery {
 	margin:0px 0 40px 0;
 	.row {
-		@include bg_border($cream, 3px);
+		@include bg_border($cream, 30px);
+		
 	}
 }
 
@@ -182,17 +198,103 @@ button:hover {
 #contact {
 	margin:40px 0 40px 0;
 	.row {
-		@include bg_border($cream, 3px);
+		@include bg_border($cream, 30px);
 	}
 }
 
 /* ==== SERVICES ==== */
 #services {
 	margin:40px 0 40px 0;
+	
 	.row {
-		@include bg_border($cream, 3px);
+		@include bg_border($cream, 30px);
+		
+		.rservices {
+			padding:40px 0 60px 0;
+
+			.col-sm-4 {
+				display: inline-block;
+				margin: 0 1% 0 1%;
+				width: 31%;
+				background: lighten($pink,20%);
+				padding: 30px 20px 10px;
+				position: relative;
+				vertical-align: top;
+				border-top-left-radius: 50% 20%;
+				border-top-right-radius: 50% 20%;
+				border-bottom-left-radius: 25% 100%;
+				border-bottom-right-radius: 25% 100%;
+				border:2px $pink solid;
+
+
+				
+
+				span {
+					background: lighten($cream,10%);
+					display: block;
+					height: 70px;
+					width: 70px;
+					text-align: center;
+					line-height: 70px;
+					font-weight: bold;
+					font-size: 24px;
+					border-radius: 100%;
+					-webkit-border-radius: 100%;
+					-moz-border-radius: 100%;
+					border:2px lighten($blue,20%) solid;
+					position: absolute;
+					top: -35px;
+					left: 50%;
+					margin-left: -35px;
+					
+				}
+			}
+		}
 	}
 }
+
+/* ==== REVIEWS ==== */
+#reviews {
+	margin:40px 0 40px 0;
+	.row {
+		@include bg_border($cream, 30px);
+		
+		.review {
+			padding:10px 0 10px 0;	
+			display:table;					
+			
+			.col-sm-4 {
+				display: table-cell;	
+				vertical-align: middle;
+				img {					
+					height:250px;
+					width:250px;
+				}
+			}
+			
+			.col-sm-8 {	
+				display:table;	
+				height:250px;				
+				
+				blockquote {
+					border-left:none;
+					display: table-cell;	
+					vertical-align: middle;
+				}
+			}	
+		}	
+	}
+}
+
+/* ==== ABOUT ==== */
+#about {
+	margin:40px 0 40px 0;
+	.row {
+		@include bg_border($cream, 30px);
+			
+	}
+}
+
 
 /* ==== FOOTER ==== */
 footer {
@@ -203,7 +305,7 @@ footer {
 	
 	.col-sm-4 {
 		border-right:1px solid $pink; 
-		height:230px;
+		height:260px;
 	}
 	
 	.col-sm-4:last-child {

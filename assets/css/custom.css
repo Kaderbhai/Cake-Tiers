@@ -42,12 +42,26 @@ h1, h2, h3, h4, h5 {
 #maps-height {
   padding-top: 0;
   margin-top: 30px;
-  height: 500px;
+  height: 400px;
   width: 100%; }
 
 #map {
   height: 100%;
   width: 100%; }
+
+.border {
+  width: 70%;
+  height: 40px;
+  margin: 20px 0 20px 0; }
+
+.border-inverse {
+  width: 70%;
+  height: 40px;
+  transform: rotate(180deg);
+  margin: 20px 0 20px 0; }
+
+.img-responsive {
+  border: 3px solid #df71b2; }
 
 /* ==== GLOBAL ==== */
 button {
@@ -61,9 +75,6 @@ button {
 button:hover {
   transition: 1s;
   background: #bf2b82; }
-
-.row {
-  padding: 0 0 40px 0; }
 
 .margin {
   margin: 0; }
@@ -105,28 +116,92 @@ button:hover {
     padding-top: 75px;
     height: 600px;
     background: rgba(255, 255, 208, 0.7);
-    border-radius: 3px; }
+    border-radius: 3px;
+    border-left: 1px solid #df71b2;
+    border-right: 1px solid #df71b2; }
 
 /* ==== GALLERY ==== */
 #gallery {
   margin: 0px 0 40px 0; }
   #gallery .row {
     background: #ffffd0;
-    border-radius: 3px; }
+    border-radius: 30px; }
 
 /* ==== CONTACT ==== */
 #contact {
   margin: 40px 0 40px 0; }
   #contact .row {
     background: #ffffd0;
-    border-radius: 3px; }
+    border-radius: 30px; }
 
 /* ==== SERVICES ==== */
 #services {
   margin: 40px 0 40px 0; }
   #services .row {
     background: #ffffd0;
-    border-radius: 3px; }
+    border-radius: 30px; }
+    #services .row .rservices {
+      padding: 40px 0 60px 0; }
+      #services .row .rservices .col-sm-4 {
+        display: inline-block;
+        margin: 0 1% 0 1%;
+        width: 31%;
+        background: #f2c4df;
+        padding: 30px 20px 10px;
+        position: relative;
+        vertical-align: top;
+        border-top-left-radius: 50% 20%;
+        border-top-right-radius: 50% 20%;
+        border-bottom-left-radius: 25% 100%;
+        border-bottom-right-radius: 25% 100%;
+        border: 2px #df71b2 solid; }
+        #services .row .rservices .col-sm-4 span {
+          background: white;
+          display: block;
+          height: 70px;
+          width: 70px;
+          text-align: center;
+          line-height: 70px;
+          font-weight: bold;
+          font-size: 24px;
+          border-radius: 100%;
+          -webkit-border-radius: 100%;
+          -moz-border-radius: 100%;
+          border: 2px #bdd9d8 solid;
+          position: absolute;
+          top: -35px;
+          left: 50%;
+          margin-left: -35px; }
+
+/* ==== REVIEWS ==== */
+#reviews {
+  margin: 40px 0 40px 0; }
+  #reviews .row {
+    background: #ffffd0;
+    border-radius: 30px; }
+    #reviews .row .review {
+      padding: 10px 0 10px 0;
+      display: table; }
+      #reviews .row .review .col-sm-4 {
+        display: table-cell;
+        vertical-align: middle; }
+        #reviews .row .review .col-sm-4 img {
+          height: 250px;
+          width: 250px; }
+      #reviews .row .review .col-sm-8 {
+        display: table;
+        height: 250px; }
+        #reviews .row .review .col-sm-8 blockquote {
+          border-left: none;
+          display: table-cell;
+          vertical-align: middle; }
+
+/* ==== ABOUT ==== */
+#about {
+  margin: 40px 0 40px 0; }
+  #about .row {
+    background: #ffffd0;
+    border-radius: 30px; }
 
 /* ==== FOOTER ==== */
 footer {
@@ -134,7 +209,7 @@ footer {
   border-radius: 0px; }
   footer .col-sm-4 {
     border-right: 1px solid #df71b2;
-    height: 230px; }
+    height: 260px; }
   footer .col-sm-4:last-child {
     border-right: none; }
   footer .copyright {
